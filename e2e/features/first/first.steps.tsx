@@ -1,6 +1,4 @@
-const jestCucumber = require('jest-cucumber');
-
-const { loadFeature, defineFeature } = jestCucumber; // as JestCucumber;
+import { loadFeature, defineFeature } from 'jest-cucumber';
 
 const feature = loadFeature('e2e/features/first/first.feature');
 
