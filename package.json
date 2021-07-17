@@ -129,7 +129,7 @@
     "build:profile": "npm run build --profile && serve -s build",
     "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
     "analyzer": "npm run build && npx cra-bundle-analyzer",
-    "verify": "CHOKIDAR_USEPOLLING=1 npm run lint && npm run test:once && npm run test:e2e",
+    "verify": "CHOKIDAR_USEPOLLING=1 npm run test:e2e && npm run lint && npm run test:once",
     "deploy": "gh-pages -d build"
   },
   "license": "Apache-2.0",

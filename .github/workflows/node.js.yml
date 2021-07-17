@@ -20,7 +20,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Setup
-        run: npm ci
+        run: |
+          echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+          npm ci
       - name: Lint & Test
         run: npm run verify
       - name: Build
