@@ -61,7 +61,8 @@
           "src/tests/**/*"
         ]
       }
-    ]
+    ],
+		"global-require": "off"
   }
 }
 

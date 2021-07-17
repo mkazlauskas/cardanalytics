@@ -2,3 +2,5 @@
 // file to avoid TS lint errors
 declare let SERVER_URL: string;
 declare let JEST_TIMEOUT: number;
+
+declare type JestCucumber = typeof import('jest-cucumber');
