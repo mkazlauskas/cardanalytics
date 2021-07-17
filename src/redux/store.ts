@@ -1,11 +1,9 @@
-// src/redux/store.ts
+import { createStore, combineReducers } from 'redux';
 
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-
-const store = configureStore({
-  reducer: combineReducers({
-    // your reducers goes here
+const store = createStore(
+  combineReducers({
+    null: (state = null) => state,
   }),
-})
+);
 
-export default store
+export default store;
