@@ -1,3 +1,3 @@
 # cardanalytics
 
-Cardano chain analytics dashboard
+Cardano blockchain analytics dashboard
