@@ -9,7 +9,7 @@ defineFeature(feature, test => {
     });
 
     when('I enter my password correctly', () => {
-      // expect(true).toBe(false);
+      expect(true).toBe(false);
     });
 
     then('I should be granted access', async () => {
