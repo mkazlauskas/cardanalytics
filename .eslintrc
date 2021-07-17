@@ -12,6 +12,7 @@
       }
     }
   },
+	"ignorePatterns": ["config/**/*.js", "scripts/**/*.js"],
   "rules": {
     "object-curly-spacing": ["warn", "always"],
     "no-unused-vars": [
@@ -50,18 +51,7 @@
       }
     ],
     "react/jsx-key": "error",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/*.test.js",
-          "**/*.test.jsx",
-          "**/*.test.ts",
-          "**/*.test.tsx",
-          "src/tests/**/*"
-        ]
-      }
-    ],
+    "import/no-extraneous-dependencies": "off",
 		"global-require": "off"
   }
 }

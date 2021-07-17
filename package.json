@@ -2,11 +2,17 @@
   "name": "cardanalytics",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+	"dependencies": {
+		"@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
+	},
+  "devDependencies": {
     "@babel/core": "7.9.0",
     "@babel/helper-builder-react-jsx": "^7.10.4",
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
     "@octokit/core": "^3.1.4",
     "@octokit/plugin-request-log": "1.0.2",
     "@svgr/webpack": "4.3.3",
@@ -53,7 +59,7 @@
     "eslint-import-resolver-typescript": "^2.2.0",
     "eslint-loader": "3.0.3",
     "eslint-plugin-flowtype": "4.6.0",
-    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-import": "2.23.4",
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "^3.1.4",
@@ -72,6 +78,7 @@
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
     "mini-css-extract-plugin": "0.9.0",
+    "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
@@ -84,16 +91,11 @@
     "prettier-eslint-cli": "^5.0.0",
     "prop-types": "^15.7.2",
     "puppeteer": "^5.4.1",
-    "react": "17.0.2",
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
-    "react-dom": "17.0.2",
-    "react-redux": "^7.2.1",
     "react-test-renderer": "^16.14.0",
-    "redux": "^4.0.5",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
-    "sass-loader": "8.0.2",
     "semver": "6.3.0",
     "serve": "^11.3.2",
     "sinon": "^9.2.0",
@@ -113,6 +115,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+		"test:once": "node scripts/test.js --watchAll=false",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
     "fix": "eslint --ext .js,.jsx,.ts,.tsx  --fix ./",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json}'",
@@ -125,7 +128,8 @@
     "build:serve": "yarn build && serve -s build",
     "build:profile": "yarn build --profile && serve -s build",
     "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
-    "analyzer": "yarn build && npx cra-bundle-analyzer"
+    "analyzer": "yarn build && npx cra-bundle-analyzer",
+		"verify": "run-p lint test:once test:e2e"
   },
   "license": "Apache-2.0",
   "eslintConfig": {
@@ -168,13 +172,11 @@
       "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"
     ],
     "modulePaths": [],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+      "^react-native$": "react-native-web"
     },
     "moduleFileExtensions": [
       "web.js",
