@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/cardanalytics/static/js/main.b8e2168e.chunk.js",
+    "main.js.map": "/cardanalytics/static/js/main.b8e2168e.chunk.js.map",
+    "runtime-main.js": "/cardanalytics/static/js/runtime-main.8f21361b.js",
+    "runtime-main.js.map": "/cardanalytics/static/js/runtime-main.8f21361b.js.map",
+    "static/js/2.4ba94a95.chunk.js": "/cardanalytics/static/js/2.4ba94a95.chunk.js",
+    "static/js/2.4ba94a95.chunk.js.map": "/cardanalytics/static/js/2.4ba94a95.chunk.js.map",
+    "index.html": "/cardanalytics/index.html",
+    "precache-manifest.29c20f81a0e9c027c2f848c3116906f8.js": "/cardanalytics/precache-manifest.29c20f81a0e9c027c2f848c3116906f8.js",
+    "service-worker.js": "/cardanalytics/service-worker.js",
+    "static/js/2.4ba94a95.chunk.js.LICENSE.txt": "/cardanalytics/static/js/2.4ba94a95.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/cardanalytics/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f21361b.js",
+    "static/js/2.4ba94a95.chunk.js",
+    "static/js/main.b8e2168e.chunk.js"
+  ]
+}
