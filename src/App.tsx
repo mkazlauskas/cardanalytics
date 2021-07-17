@@ -7,6 +7,7 @@ const App: FunctionComponent = () => {
   return (
     <Provider store={store}>
       <Root />
+      {[].map(() => <span />)}
     </Provider>
   );
 };

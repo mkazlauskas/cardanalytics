@@ -12,6 +12,5 @@ describe('<AppRouter />', () => {
 
   test('renders without crashing', () => {
     expect(component.length).toBe(1);
-    expect(true).toBe(false);
   });
 });
