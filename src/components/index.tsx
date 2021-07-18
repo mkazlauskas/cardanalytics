@@ -1,24 +1,28 @@
+import { Card, CardContent, CardHeader, createStyles, Grid, makeStyles, Theme } from '@material-ui/core';
 import React from 'react';
-import logo from '../assets/logo.svg';
+import GeneralStats from './GeneralStats';
 
-function App() {
+const useStyles = makeStyles((theme: Theme) => createStyles({
+  container: { backgroundColor: theme.palette.background.default },
+  card: { margin: theme.spacing() }
+}));
+
+const cards = [{ title: 'General Stats', Component: GeneralStats }];
+
+function Layout() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit 
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a className="App-link" href="https://github.com/EliEladElrom/react-tutorials" target="_blank" rel="noopener noreferrer">
-          Eli Elad Elrom - React Tutorials
-        </a>
-      </header>
-    </div>
+    <Grid className={classes.container} container>
+      {cards.map(({ title, Component }) => (
+        <Card className={classes.card} key={title}>
+          <CardHeader title={title} />
+          <CardContent>
+            <Component />
+          </CardContent>
+        </Card>
+      ))}
+    </Grid>
   );
 }
 
-export default App;
+export default Layout;

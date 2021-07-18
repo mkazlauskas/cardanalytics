@@ -6,5 +6,13 @@ import '@testing-library/jest-dom/extend-expect';
 
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+// import enableHooks from 'jest-react-hooks-shallow';
+// enableHooks(jest);
+
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useSelector: jest.fn(),
+  useDispatch: jest.fn()
+}));
 
 configure({ adapter: new Adapter() });

@@ -1,5 +1,5 @@
 Feature: General stats
-	Scenario: Dashboard shows # of blocks, # of transactions, current era, current epoch and current slot
+	Scenario: Dashboard shows general blockchain stats
 		Given I open cardanalytics
 		When it finishes to load data
-		Then I should see # of blocks, # of transactions, current era, current epoch and current slot
+		Then I should see totals of blocks, transactions, stake pools, ADA stake amount, assets, as well as current era, epoch and slot

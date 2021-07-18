@@ -14,7 +14,7 @@ const sockHost = process.env.WDS_SOCKET_HOST
 const sockPath = process.env.WDS_SOCKET_PATH // default: '/sockjs-node'
 const sockPort = process.env.WDS_SOCKET_PORT
 
-module.exports = function (proxy, allowedHost, noWatch) {
+module.exports = function (proxy, allowedHost, testBuild) {
   return {
     // WebpackDevServer 2.4.3 introduced a security fix that prevents remote
     // websites from potentially accessing local content through DNS rebinding:
@@ -55,13 +55,13 @@ module.exports = function (proxy, allowedHost, noWatch) {
     contentBase: paths.appPublic,
     contentBasePublicPath: paths.publicUrlOrPath,
     // By default files from `contentBase` will not trigger a page reload.
-    watchContentBase: !noWatch,
+    watchContentBase: !testBuild,
     // Enable hot reloading server. It will provide WDS_SOCKET_PATH endpoint
     // for the WebpackDevServer client so it can learn when the files were
     // updated. The WebpackDevServer client is included as an entry point
     // in the webpack development configuration. Note that only changes
     // to CSS are currently hot reloaded. JS changes will refresh the browser.
-    hot: !noWatch,
+    hot: !testBuild,
     // Use 'ws' instead of 'sockjs-node' on server since we're using native
     // websockets in `webpackHotDevClient`.
     transportMode: 'ws',
@@ -88,7 +88,7 @@ module.exports = function (proxy, allowedHost, noWatch) {
     // https://github.com/facebook/create-react-app/issues/1065
     watchOptions: {
       ignored: ignoredFiles(paths.appSrc),
-      poll: !!noWatch,
+      poll: !!testBuild,
     },
     https: getHttpsConfig(),
     host,
