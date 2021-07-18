@@ -3,8 +3,8 @@ import { levels, setLevel } from 'loglevel';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import Components from './components';
-import store from './redux/store';
+import Components from '../components';
+import store from './store';
 
 setLevel(process.env.NODE_ENV === 'production' ? levels.INFO : levels.DEBUG);
 

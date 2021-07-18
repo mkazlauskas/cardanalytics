@@ -1,11 +1,10 @@
 import { loadFeature, defineFeature } from 'jest-cucumber';
+import { givenIOpenCardanalytics, whenItFinishesToLoadData } from './helpers';
 
 defineFeature(loadFeature('e2e/features/loader.feature'), test => {
   const rootChildrenLen = () => page.evaluate(() => document.getElementById('root')?.children.length);
   test('Loader animation', ({ given, when, then }) => {
-    given('I open cardanalytics', async () => {
-      await page.goto(SERVER_URL, { waitUntil: 'domcontentloaded' });
-   	});
+    givenIOpenCardanalytics(given);
 
     when("it's still loading", () => {
       // nothing to do
@@ -18,13 +17,9 @@ defineFeature(loadFeature('e2e/features/loader.feature'), test => {
     });
   }, JEST_TIMEOUT);
   test('App loaded', ({ given, when, then }) => {
-    given('I open cardanalytics', async () => {
-      await page.goto(SERVER_URL, { waitUntil: 'domcontentloaded' });
-    });
+    givenIOpenCardanalytics(given);
 
-    when('it finishes to load data', async () => {
-      await page.waitForFunction(() => !document.getElementById('preloader'));
-    });
+    whenItFinishesToLoadData(when);
 
     then('I should see the app', async () => {
       expect(await rootChildrenLen()).toBe(1);
