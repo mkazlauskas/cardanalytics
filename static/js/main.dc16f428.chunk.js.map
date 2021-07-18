@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.tsx"],"names":[],"mappings":"4IAAA,YAEA,oD","file":"static/js/main.dc16f428.chunk.js","sourcesContent":["import 'loaders.css/loaders.min.css';\n\nimport('./app');\n"],"sourceRoot":""}
