@@ -24,10 +24,39 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>cardanalytics</title>
+		<style>
+			html,
+			body,
+			#root {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+
+			#preloader {
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#preloader .ball-scale-multiple>div {
+				background-color: #0d47a1;
+			}
+		</style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="preloader" class="loader">
+			<div class="loader-inner ball-scale-multiple">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
     <div id="root"></div>
     <!--
       This HTML file is a template.

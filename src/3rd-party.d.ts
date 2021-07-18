@@ -1,0 +1,1 @@
+declare module '@input-output-hk/react-preloader';
