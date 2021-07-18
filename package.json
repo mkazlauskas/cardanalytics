@@ -5,6 +5,8 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "loaders.css": "^0.1.2",
+    "loglevel": "^1.7.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "^7.2.1",
@@ -129,7 +131,7 @@
     "build:profile": "npm run build --profile && serve -s build",
     "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
     "analyzer": "npm run build && npx cra-bundle-analyzer",
-    "verify": "CHOKIDAR_USEPOLLING=1 npm run test:e2e && npm run lint && npm run test:once",
+    "verify": "npm run lint && npm run test:once && npm run test:e2e",
     "deploy": "gh-pages -d build"
   },
   "license": "Apache-2.0",

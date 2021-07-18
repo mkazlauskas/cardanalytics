@@ -88,7 +88,7 @@ module.exports = function (proxy, allowedHost, noWatch) {
     // https://github.com/facebook/create-react-app/issues/1065
     watchOptions: {
       ignored: ignoredFiles(paths.appSrc),
-      poll: noWatch,
+      poll: !!noWatch,
     },
     https: getHttpsConfig(),
     host,
