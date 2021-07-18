@@ -21,3 +21,7 @@ const store = createStore(
 
 export default store;
 
+// Simulating load time.
+setTimeout(() => {
+	document.getElementById('preloader')?.remove();
+}, 1000);

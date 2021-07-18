@@ -23,9 +23,4 @@ export default (store: Store) => {
   );
 
   ReactDOM.render(app, document.getElementById('root'));
-
-  // Simulating load time. TODO: Move this to an epic
-  setTimeout(() => {
-		document.getElementById('preloader')?.remove();
-  }, 1000);
 };

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GeneralStats should match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  className="makeStyles-container-1"
+  container={true}
+>
+  <WithStyles(ForwardRef(Card))
+    className="makeStyles-card-2"
+    key="General Stats"
+  >
+    <WithStyles(ForwardRef(CardHeader))
+      title="General Stats"
+    />
+    <WithStyles(ForwardRef(CardContent))>
+      <GeneralStats />
+    </WithStyles(ForwardRef(CardContent))>
+  </WithStyles(ForwardRef(Card))>
+</WithStyles(ForwardRef(Grid))>
+`;
