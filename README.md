@@ -53,4 +53,6 @@ Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://git
 - Replace stock CRA images used in manifest.json
 - Generate graphql query result type from schema.graphql+query.graphql?
 - Use webpack magic to replace `graphql-request` module on test build instead of conditional import() in code
-- cardano-graphql server sometimes goes down. Upgrading VPS to 16G will probably resolve it.
+- [Secure](https://github.com/input-output-hk/cardano-graphql/wiki/Security) `cardano-graphql` server
+- `cardano-graphql` server sometimes goes down. Upgrading VPS to 16G will probably resolve it.
+- More features!
