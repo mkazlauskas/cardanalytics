@@ -2,8 +2,8 @@
   "files": {
     "main.js": "/cardanalytics/static/js/main.af2d4134.chunk.js",
     "main.js.map": "/cardanalytics/static/js/main.af2d4134.chunk.js.map",
-    "runtime-main.js": "/cardanalytics/static/js/runtime-main.c3c2e526.js",
-    "runtime-main.js.map": "/cardanalytics/static/js/runtime-main.c3c2e526.js.map",
+    "runtime-main.js": "/cardanalytics/static/js/runtime-main.b2c9d713.js",
+    "runtime-main.js.map": "/cardanalytics/static/js/runtime-main.b2c9d713.js.map",
     "static/js/2.7efb4929.chunk.js": "/cardanalytics/static/js/2.7efb4929.chunk.js",
     "static/js/2.7efb4929.chunk.js.map": "/cardanalytics/static/js/2.7efb4929.chunk.js.map",
     "static/js/3.e0e38928.chunk.js": "/cardanalytics/static/js/3.e0e38928.chunk.js",
@@ -11,18 +11,18 @@
     "static/css/4.b8563323.chunk.css": "/cardanalytics/static/css/4.b8563323.chunk.css",
     "static/js/4.3ae57c77.chunk.js": "/cardanalytics/static/js/4.3ae57c77.chunk.js",
     "static/js/4.3ae57c77.chunk.js.map": "/cardanalytics/static/js/4.3ae57c77.chunk.js.map",
-    "static/js/5.2119f5e1.chunk.js": "/cardanalytics/static/js/5.2119f5e1.chunk.js",
-    "static/js/5.2119f5e1.chunk.js.map": "/cardanalytics/static/js/5.2119f5e1.chunk.js.map",
+    "static/js/5.b734da8a.chunk.js": "/cardanalytics/static/js/5.b734da8a.chunk.js",
+    "static/js/5.b734da8a.chunk.js.map": "/cardanalytics/static/js/5.b734da8a.chunk.js.map",
     "static/js/6.a8e47940.chunk.js": "/cardanalytics/static/js/6.a8e47940.chunk.js",
     "static/js/6.a8e47940.chunk.js.map": "/cardanalytics/static/js/6.a8e47940.chunk.js.map",
     "index.html": "/cardanalytics/index.html",
-    "precache-manifest.3786d6dd442e6ed97c4a5a5a58dac722.js": "/cardanalytics/precache-manifest.3786d6dd442e6ed97c4a5a5a58dac722.js",
+    "precache-manifest.2ad35d1efb1aafa723de30379ec38fd6.js": "/cardanalytics/precache-manifest.2ad35d1efb1aafa723de30379ec38fd6.js",
     "service-worker.js": "/cardanalytics/service-worker.js",
     "static/css/4.b8563323.chunk.css.map": "/cardanalytics/static/css/4.b8563323.chunk.css.map",
     "static/js/2.7efb4929.chunk.js.LICENSE.txt": "/cardanalytics/static/js/2.7efb4929.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3c2e526.js",
+    "static/js/runtime-main.b2c9d713.js",
     "static/css/4.b8563323.chunk.css",
     "static/js/4.3ae57c77.chunk.js",
     "static/js/main.af2d4134.chunk.js"
