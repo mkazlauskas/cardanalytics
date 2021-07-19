@@ -51,6 +51,7 @@ Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://git
 - GitHub actions don't need to run tests on PR merge
 - Resolve `npm audit` vulnerabilities, possibly add it as a check in CI
 - Handle uninitialized `cardano-graphql` database
+- e2e tests are limited to happy path due to no implemented way to change what the mock request returns
 - Refactor webpack.config.js to use NODE_ENV=test instead of a separate `testBuild` param
 - Replace stock CRA images used in manifest.json
 - Generate graphql query result type from schema.graphql+query.graphql?
