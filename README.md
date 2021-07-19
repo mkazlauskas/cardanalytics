@@ -18,7 +18,6 @@ Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://git
   - `app/`:
     - `index.tsx`: Setup react context providers
     - `store.ts`: Redux store initialization
-    - `store.mockdata.ts`: Redux store for acceptance tests
     - `actions.ts`: Redux action creators
     - `reducers/`
       - `index.ts`: Combine and export Redux reducers
@@ -34,6 +33,9 @@ Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://git
         - `index.test.ts`: Epic observable tests
     - `services/`
       - `index.ts`: Combine and export services
+      - `load/`: Service that loads Cardano data through GraphQL
+        - `graphql-request.mock.ts`: mock GraphQL client for tests
+        - `query.graphql`: GraphQL query
       - `[service]/`
         - `index.ts`: Service code
         - `index.test.ts`: Service tests
@@ -50,3 +52,5 @@ Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://git
 - Refactor webpack.config.js to use NODE_ENV=test instead of a separate `testBuild` param
 - Replace stock CRA images used in manifest.json
 - Generate graphql query result type from schema.graphql+query.graphql?
+- Use webpack magic to replace `graphql-request` module on test build instead of conditional import() in code
+- cardano-graphql server sometimes goes down. Upgrading VPS to 16G will probably resolve it.

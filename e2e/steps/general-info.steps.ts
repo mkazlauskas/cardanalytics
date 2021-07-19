@@ -10,11 +10,11 @@ defineFeature(loadFeature('e2e/features/general-info.feature'), test => {
     then('I should see totals of blocks, transactions, assets, as well as current era, epoch and slot', async () => {
       const text = await page.evaluate(() => document.body.textContent);
       [
-        'Block: 5,995,095',
-        'Total transactions: 9,787,836',
-        'Total assets: 43,751',
+        'Block: 5,998,809',
+        'Total transactions: 9,807,838',
+        'Total assets: 334,447',
         'Epoch: 278',
-        'Slot: 300,948',
+        'Slot: 35,109,155',
       ].forEach(stat => expect(text).toContain(stat));
     });
   }, JEST_TIMEOUT);

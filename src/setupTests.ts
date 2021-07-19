@@ -3,6 +3,8 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { setLevel, levels } from 'loglevel';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(process.env as any).TEST_BUILD = true;
 setLevel(levels.SILENT);
 
 // Mock react-redux hooks
