@@ -8,11 +8,11 @@ Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://git
   - `e2e/features/*.feature`: Cucumber tests in Gherkin
   - `e2e/steps/[feature].steps.js`: Feature step definitions
 - Application code is under `src/`:
-  - `index.tsx`: Load the app
+  - `index.ts`: Load the app
   - `components/`: React components
     - `[Component]`/
-      - `index.jsx`: Component code
-      - `index.test.jsx`: Component tests (currently only snapshot verification)
+      - `index.tsx`: Component code
+      - `index.test.tsx`: Component tests (currently only snapshot verification)
       - `__snapshots__/`: Generated snapshots for tests
     - `index.jsx`/`index.test.jsx`/`__snapshots__/`: Root layout component
   - `app/`:
@@ -52,10 +52,10 @@ Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://git
 - Resolve `npm audit` vulnerabilities, possibly add it as a check in CI
 - Handle uninitialized `cardano-graphql` database
 - e2e tests are limited to happy path due to no implemented way to change what the mock request returns
-- Refactor webpack.config.js to use NODE_ENV=test instead of a separate `testBuild` param
-- Replace stock CRA images used in manifest.json
+- Refactor `webpack.config.js` to use `NODE_ENV=test` instead of a separate `testBuild` param
+- Replace stock CRA images used in `manifest.json`
 - Generate graphql query result type from schema.graphql+query.graphql?
-- Use webpack magic to replace `graphql-request` module on test build instead of conditional import() in code
+- Use webpack magic to replace `graphql-request` module on test build instead of conditional `import()` in code
 - [Secure](https://github.com/input-output-hk/cardano-graphql/wiki/Security) `cardano-graphql` server
 - `cardano-graphql` server sometimes goes down. Upgrading VPS to 16G will probably resolve it.
 - More features!
