@@ -7,3 +7,8 @@ export const givenIOpenCardanalytics = (given: DefineStepFunction) => given('I o
 export const whenItFinishesToLoadData = (when: DefineStepFunction) => when('it finishes to load data', async () => {
   await page.waitForFunction(() => !document.getElementById('preloader'));
 });
+
+export const expectPageContainsAll = async (texts: string[]) => {
+  const text = await page.evaluate(() => document.body.textContent);
+  texts.forEach(stat => expect(text).toContain(stat));
+};
