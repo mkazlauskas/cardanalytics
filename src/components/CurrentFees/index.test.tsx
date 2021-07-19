@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import Component from '.';
 import { cardanoData } from '../test-helpers';
 
-describe('CardanoStats', () => {
+describe('CardanoFees', () => {
   beforeAll(() => {
     // Use mock store data in react-redux hook
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -16,5 +16,16 @@ exports[`Root component should match snapshot 1`] = `
       <GeneralInfo />
     </WithStyles(ForwardRef(CardContent))>
   </WithStyles(ForwardRef(Card))>
+  <WithStyles(ForwardRef(Card))
+    className="makeStyles-card-2"
+    key="Current Fees"
+  >
+    <WithStyles(ForwardRef(CardHeader))
+      title="Current Fees"
+    />
+    <WithStyles(ForwardRef(CardContent))>
+      <CurrentFees />
+    </WithStyles(ForwardRef(CardContent))>
+  </WithStyles(ForwardRef(Card))>
 </WithStyles(ForwardRef(Grid))>
 `;
