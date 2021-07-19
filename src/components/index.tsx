@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 const cards = [{ title: 'General Cardano Info', Component: GeneralInfo }];
 
+// Root layout component
 function Layout() {
   const classes = useStyles();
   return (

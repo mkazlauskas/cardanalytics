@@ -13,6 +13,7 @@ setLevel(process.env.NODE_ENV === 'production' ? levels.INFO : levels.DEBUG);
 const theme = createTheme({ palette:{ background: { default: grey[200] } } });
 
 export default (store: Store) => {
+  // Setup React context providers, add CssBaseline, render our app components
   const app = (
     <Provider store={store}>
       <MuiThemeProvider theme={theme}>

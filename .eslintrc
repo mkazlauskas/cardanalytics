@@ -48,7 +48,8 @@
     "import/no-extraneous-dependencies": "off",
 		"global-require": "off",
 		"radix": "off",
-		"no-plusplus": "off"
+		"no-plusplus": "off",
+		"import/prefer-default-export": "off"
   }
 }
 

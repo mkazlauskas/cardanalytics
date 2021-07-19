@@ -13,7 +13,7 @@ exports[`Root component should match snapshot 1`] = `
       title="General Cardano Info"
     />
     <WithStyles(ForwardRef(CardContent))>
-      <CardanoStats />
+      <GeneralInfo />
     </WithStyles(ForwardRef(CardContent))>
   </WithStyles(ForwardRef(Card))>
 </WithStyles(ForwardRef(Grid))>

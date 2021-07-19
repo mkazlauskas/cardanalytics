@@ -3,7 +3,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { State } from '../../app/reducers';
 
-export default function CardanoStats() {
+// Render general Cardano blockchain information
+export default function GeneralInfo() {
   const data = useSelector(({ cardanoData }: State) => cardanoData);
   if (!data) return null;
   return (

@@ -1,4 +1,4 @@
-import { services } from '.';
+import services from '.';
 
 jest.mock('graphql-request', () => ({
   GraphQLClient: jest.fn().mockImplementation(() => ({

@@ -1,12 +1,48 @@
 # cardanalytics
 
-Cardano blockchain analytics dashboard
+Cardano blockchain analytics dashboard, powered by [cardano-graphql](https://github.com/input-output-hk/cardano-graphql).
+
+## Code structure
+
+- Acceptance tests are located at:
+  - `e2e/features/*.feature`: Cucumber tests in Gherkin
+  - `e2e/steps/[feature].steps.js`: Feature step definitions
+- Application code is under `src/`:
+  - `index.tsx`: Load the app
+  - `components/`: React components
+    - `[Component]`/
+      - `index.jsx`: Component code
+      - `index.test.jsx`: Component tests (currently only snapshot verification)
+      - `__snapshots__/`: Generated snapshots for tests
+    - `index.jsx`/`index.test.jsx`/`__snapshots__/`: Root layout component
+  - `app/`:
+    - `index.tsx`: Setup react context providers
+    - `store.ts`: Redux store initialization
+    - `store.mockdata.ts`: Redux store for acceptance tests
+    - `actions.ts`: Redux action creators
+    - `reducers/`
+      - `index.ts`: Combine and export Redux reducers
+      - `[reducer]/`
+        - `index.ts`: Reducer function
+        - `index.test.ts`: Reducer function tests
+    - `epics/`
+      - `index.ts`: Combine and export redux-observable epics
+      - `types.ts`: Types used by epics
+      - `test-helpers.ts`: Helper functions for testing epics
+      - `[epic]/`
+        - `index.ts`: Epic
+        - `index.test.ts`: Epic observable tests
+    - `services/`
+      - `index.ts`: Combine and export services
+      - `[service]/`
+        - `index.ts`: Service code
+        - `index.test.ts`: Service tests
 
 ## Tests
 
-- e2e tests using `puppeteer`, `jest` and `jest-cucumber`
+- Acceptance tests using `puppeteer`, `jest` and `jest-cucumber`
 - React component snapshot tests using `jest`, `enzyme` and `enzyme-to-json`
-- `jest` unit tests for reducers, `redux-observable` epics and services
+- `jest` unit tests for `redux` reducers, `redux-observable` epics and services
 
 ## TODOs
 
