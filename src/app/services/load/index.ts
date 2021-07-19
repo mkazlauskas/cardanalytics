@@ -1,14 +1,24 @@
 import { loader } from 'graphql.macro';
-import { Asset_Aggregate_Fields, Block, Transaction_Aggregate_Fields } from '@cardano-graphql/client-ts';
+import { Asset_Aggregate_Fields, Block, Transaction, Transaction_Aggregate_Fields } from '@cardano-graphql/client-ts';
 import { from } from 'rxjs';
+import { min, max, mean } from 'lodash-es';
 import { CardanoStats } from '../../types';
 
 // TODO: would be great to generate this type from schema.graphql+query.graphql
+type TransactionFees = Pick<Transaction, 'fee'>[];
+type CardanoTip = {
+  transactions: TransactionFees;
+  previousBlock: {
+    transactions: TransactionFees;
+  };
+} & Required<Pick<Block, 'epochNo'|'number'|'slotNo'>>;
 interface QueryResponse {
   transactions_aggregate: {
     aggregate: Pick<Transaction_Aggregate_Fields, 'count'>
   };
-  cardano: {tip: Required<Pick<Block, 'epochNo'|'number'|'slotNo'>>};
+  cardano: {
+    tip: CardanoTip;
+  };
   assets_aggregate: {
     aggregate: Pick<Asset_Aggregate_Fields, 'count'>;
   }
@@ -30,6 +40,7 @@ export default {
         epoch: tip.epochNo || 0,
         slot: tip.slotNo || 0,
         transactions: parseInt(transactions_aggregate.aggregate.count),
+        currentFees: cardanoTipToFeesAggregate(tip),
       } as CardanoStats)
     ));
   },
@@ -38,3 +49,13 @@ export default {
     return from(this.load());
   }
 };
+
+function cardanoTipToFeesAggregate({ previousBlock, transactions }: CardanoTip) {
+  const allTransactions = [...previousBlock.transactions, ...transactions].map(t => parseInt(t.fee));
+  // Assuming there can't be 2 consecutive blocks with no transactions
+  return {
+    min: min(allTransactions)!,
+    max: max(allTransactions)!,
+    average: mean(allTransactions),
+  };
+}
