@@ -9,6 +9,14 @@
       epochNo
       number
       slotNo
+      transactions {
+        fee
+      }
+      previousBlock {
+        transactions {
+          fee
+        }
+      }
     }
   }
   assets_aggregate {
