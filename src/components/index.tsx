@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, createStyles, Grid, makeStyles, Theme } from '@material-ui/core';
 import React from 'react';
+import CurrentFees from './CurrentFees';
 import GeneralInfo from './GeneralInfo';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -7,7 +8,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   card: { margin: theme.spacing() }
 }));
 
-const cards = [{ title: 'General Cardano Info', Component: GeneralInfo }];
+const cards = [
+  { title: 'General Cardano Info', Component: GeneralInfo },
+  { title: 'Current Fees', Component: CurrentFees },
+];
 
 // Root layout component
 function Layout() {
