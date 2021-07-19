@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.tsx"],"names":[],"mappings":"4IAAA,YAIA,oD","file":"static/js/main.af2d4134.chunk.js","sourcesContent":["// Display preloader animation\nimport 'loaders.css/loaders.min.css';\n\n// Load the app asynchronously\nimport('./app');\n"],"sourceRoot":""}
