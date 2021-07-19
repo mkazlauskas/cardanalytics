@@ -1,7 +1,7 @@
 import { ActionType, createAction } from 'typesafe-actions';
-import { GeneralStats } from './types';
+import { CardanoStats } from './types';
 
-export const loadGeneralStats = createAction('LOAD_GENERAL_STATS')<GeneralStats>();
+export const loadCardanoData = createAction('LOAD_CARDANO_DATA')<CardanoStats>();
 
-export const actions = { loadGeneralStats };
+export const actions = { loadCardanoData };
 export type Action = ActionType<typeof actions>;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardanoStats should match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  direction="column"
+>
+  <span>
+    Epoch:
+     
+    278
+  </span>
+  <span>
+    Block:
+     
+    5,995,095
+  </span>
+  <span>
+    Slot:
+     
+    300,948
+  </span>
+  <span>
+    Total transactions:
+     
+    9,787,836
+  </span>
+  <span>
+    Total assets:
+     
+    43,751
+  </span>
+</WithStyles(ForwardRef(Grid))>
+`;

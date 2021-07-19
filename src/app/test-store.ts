@@ -1,21 +1,18 @@
 import { createStore } from 'redux';
 import { State } from './reducers';
-import { GeneralStats } from './types';
+import { CardanoStats } from './types';
 
-export const generalStats: GeneralStats = {
+export const testCardanoData: CardanoStats = {
   blocks: 5995095,
   transactions: 9787836,
-  stakePools: 2877,
-  adaStake: 23.24*1000000000,
   assets: 43751,
-  era: 'Shelley',
   epoch: 278,
   slot: 300948,
 }; 
 
 const store = createStore(
   (): State => ({
-    generalStats
+    cardanoData: testCardanoData
   }),
 );
 

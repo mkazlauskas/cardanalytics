@@ -1,13 +1,13 @@
 import { Card, CardContent, CardHeader, createStyles, Grid, makeStyles, Theme } from '@material-ui/core';
 import React from 'react';
-import GeneralStats from './GeneralStats';
+import GeneralInfo from './GeneralInfo';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   container: { backgroundColor: theme.palette.background.default },
   card: { margin: theme.spacing() }
 }));
 
-const cards = [{ title: 'General Stats', Component: GeneralStats }];
+const cards = [{ title: 'General Cardano Info', Component: GeneralInfo }];
 
 function Layout() {
   const classes = useStyles();

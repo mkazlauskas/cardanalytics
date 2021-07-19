@@ -1,0 +1,19 @@
+{
+  transactions_aggregate {
+    aggregate {
+      count
+    }
+  }
+  cardano {
+    tip {
+      epochNo
+      number
+      slotNo
+    }
+  }
+  assets_aggregate {
+    aggregate {
+      count
+    }
+  }
+}

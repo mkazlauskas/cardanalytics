@@ -6,8 +6,9 @@ import '@testing-library/jest-dom/extend-expect';
 
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-// import enableHooks from 'jest-react-hooks-shallow';
-// enableHooks(jest);
+import { setLevel, levels } from 'loglevel';
+
+setLevel(levels.SILENT);
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),

@@ -1,10 +1,7 @@
-export interface GeneralStats {
+export interface CardanoStats {
   blocks: number;
   transactions: number;
-  stakePools: number;
-  adaStake: number;
   assets: number;
-  era: string;
   epoch: number;
   slot: number;
 }

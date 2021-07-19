@@ -44,15 +44,11 @@
         "ignoreComments": true
       }
     ],
-    "no-plusplus": [
-      "error",
-      {
-        "allowForLoopAfterthoughts": true
-      }
-    ],
     "react/jsx-key": "error",
     "import/no-extraneous-dependencies": "off",
-		"global-require": "off"
+		"global-require": "off",
+		"radix": "off",
+		"no-plusplus": "off"
   }
 }
 

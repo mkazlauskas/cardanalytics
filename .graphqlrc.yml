@@ -1,0 +1,2 @@
+schema: 'node_modules/@cardano-graphql/client-ts/api/cardano-db-hasura/schema.graphql'
+documents: 'src/**/*.{graphql,js,ts,jsx,tsx}'
