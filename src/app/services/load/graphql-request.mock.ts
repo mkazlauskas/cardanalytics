@@ -11,7 +11,22 @@ export class GraphQLClient {
         'tip': {
           'epochNo': 278,
           'number': 5998809,
-          'slotNo': 35109155
+          'slotNo': 35109155,
+          'transactions': [
+            {
+              'fee': 260000
+            }
+          ],
+          'previousBlock': {
+            'transactions': [
+              {
+                'fee': 160000
+              },
+              {
+                'fee': 180000
+              },
+            ]
+          }
         }
       },
       'assets_aggregate': {

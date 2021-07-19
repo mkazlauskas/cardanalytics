@@ -4,4 +4,9 @@ export interface CardanoStats {
   assets: number;
   epoch: number;
   slot: number;
+  currentFees: {
+    min: number;
+    max: number;
+    average: number;
+  };
 }
