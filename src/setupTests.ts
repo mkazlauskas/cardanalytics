@@ -7,6 +7,9 @@ import { setLevel, levels } from 'loglevel';
 (process.env as any).TEST_BUILD = true;
 setLevel(levels.SILENT);
 
+// jest environment is not happy with lodash-es exports
+jest.mock('lodash-es', () => require('lodash'));
+
 // Mock react-redux hooks
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
